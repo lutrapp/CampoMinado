@@ -11,18 +11,29 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(img/baloes.jpg);
+    background-image: url(img/baloes2.jpg);
     background-attachment: fixed;
     background-size: cover;
+  
+    background-position: bottom;
     font-size: 1.6em;
     font-variant: small-caps;
     text-align: center;
-    margin: 1% 2% 1% 2%;
-    padding: 1% 2% 1% 2%;
+    margin: 1% 0% 1% 0%;
+    padding: 1% 2% 1% 0%;
     }
+
+header {
+  height: 200px;
+}
 
 h1 {
     color: white;
+}
+
+#msgHercules {
+  color: yellow;
+  text-shadow: 5px 5px 5px black;
 }
 
 /* svg */
@@ -37,12 +48,12 @@ h1 {
   }
   
   .text:nth-child(5n + 1) {
-    stroke: #F2385A;
+    stroke: orange;
     -webkit-animation-delay: -1.2s;
     animation-delay: -1.2s;
   }
   .text:nth-child(5n + 2) {
-    stroke: var(--soulCodeAmarelo);
+    stroke: yellow;
     -webkit-animation-delay: -2.4s;
     animation-delay: -2.4s;
   }
@@ -54,13 +65,13 @@ h1 {
   }
   
   .text:nth-child(5n + 4) {
-    stroke: var(--soulCodeAzul);
+    stroke: green;
     -webkit-animation-delay: -4.8s;
     animation-delay: -4.8s;
   }
   
   .text:nth-child(5n + 5) {
-    stroke:#60c50c;
+    stroke:black;
     -webkit-animation-delay: -6s;
     animation-delay: -6s;
   }
@@ -86,6 +97,23 @@ h1 {
     /* letter-spacing: .05em; */
   }
 
+  #btngame {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    position: relative;
+    background-color: grey;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  #btngame:hover {
+    background-image: url(img/balaoAzul.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+
+  }
   /* página do jogo */
 /* arruma itens do placar */
 body#bodyGame {
@@ -94,12 +122,11 @@ body#bodyGame {
 
 article {
   display:flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 10px;
-  background-color: black;
   color: white;
   font-size: 1em;
-  height: 100px;
+  height: 80px;
 }
 
 #bmb {
@@ -108,29 +135,74 @@ article {
 }
 
 #pts {
-  background-color: chartreuse;
+  background-color: darkblue;
   padding: 10px;
 }
 #pontos, #bombas{
   display: flex;
-margin-top: 20px;
-justify-content: center;
-font-size: 1.8em;
+  margin: 20px 300px;
+  justify-content: center;
+  font-size: 1.8em;
+}
+#regras {
+  font-size: .7em;
+  position: relative;
+}
+
+/* regras aparecem ao passar o mouse */
+.tooltip {
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 320px;
+  background-color: yellow;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: .9em;
+  bottom: 100%;
+  transform: rotate(10deg);
+  left: 63%;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 button#joga {
   font-variant: small-caps;
-font-size: 1em;
-padding: 10px;
-border-radius: 5px;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 button#joga:hover {
   transition: .8s;
-  background-color: darkblue;
-  color: white;
+  color: #59b5c4;
   cursor: pointer;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+  position: fixed;
+  bottom: 0;
+width: 100%;
+align-items: center;
+font-variant: small-caps;
+color: yellow;
+}
+
 
 /* campo minado */
 section#jogo {
@@ -146,9 +218,9 @@ section#jogo#div{
 
 /* arruma o tamanho das imagens de grama e bomba chamadas no javascript */
 div {
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #fixed {
@@ -168,3 +240,25 @@ background-repeat: no-repeat;
     font-size: .5em;
     border: #f3c110 5px dotted;
 }
+
+#party {
+  padding: 20px;
+  position: fixed;
+  font-size: 1em;
+  top: 7%;
+  left: 1%;
+  height: 160px;
+  width: 160px;
+  border-radius: 10px;
+  background-image: url(img/balaoAzul.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#party:hover {
+  cursor: pointer;
+  transition: 1s;
+  color: yellow;
+}
+

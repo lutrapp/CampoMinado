@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
     <head>
         <meta charset="UTF-8">
@@ -15,28 +15,40 @@
 
     <body id="bodyGame">
         <header>
-            <h1>
-                Placar
-            </h1>
+
             <article>
                 <div>
                     <span id="pts">pontos:</span>
                     <div id="pontos"></div>
                 </div>
                 <div>
+                    <h1 id="placar">
+                        Placar
+                    </h1>
+                </div>
+                <div>
                     <span id="bmb">bombas:</span>
                     <div id="bombas"></div>
                 </div>
             </article>
-            <button  id="joga" onclick="jogar()">Jogar novamente</button>
+            <button id="joga" onclick="jogar()">Jogar novamente</button>
+            <div id="regras" onmouseover="escondeH1()" onmouseout="mostraH1()" class="tooltip">Veja as regras aqui!
+                <span class="tooltiptext">Se fizer 30 pontos você ganha!<br /> Se clicar em 30 bombas você
+                    perde.
+                </span>
+            </div>
         </header>
         <main>
             <section id="jogo">
+                <!-- aqui entram as divs nesse formato, serão 75, incluídas com javascript -->
                 <!-- <div>
                     <input type="text" value="0">
                 </div> -->
 
             </section>
+            <a href="index.html">
+            <div  id="party">Hercules faz 9!!!</div>
+        </a>
             <div id="fixed">desenvolvido por Luciane Trapp &reg;</div>
         </main>
 

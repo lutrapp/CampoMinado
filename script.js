@@ -1,6 +1,9 @@
+// script com base em 
+// https://codepen.io/FelixLuciano/pen/PoqdMKP
+
 async function init () {
-    const texto = document.querySelector("#msgHercules")
-    
+    const texto = document.querySelector("#msgHercules");
+  
     await sleep(1000)
     texto.text = ""
     await texto.type('Hercules, ')
