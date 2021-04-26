@@ -3,25 +3,19 @@
     padding: 0;
 }
 
-:root {
-    --soulCodeAzul: #59b5c4;
-    --soulCodeAmarelo: #f3c110;
-    --soulCodeCinza: #f0eff2;
-}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url(img/baloes2.jpg);
     background-attachment: fixed;
     background-size: cover;
-  
     background-position: bottom;
     font-size: 1.6em;
     font-variant: small-caps;
     text-align: center;
     margin: 1% 0% 1% 0%;
-    padding: 1% 2% 1% 0%;
-    }
+    padding: 1% 1% 1% 1%;
+}
 
 header {
   height: 200px;
@@ -122,51 +116,59 @@ body#bodyGame {
 
 article {
   display:flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-bottom: 10px;
   color: white;
   font-size: 1em;
-  height: 80px;
+  max-height: max-content;
+  width: 100%;
+  border: 1px solid;
 }
 
 #bmb {
   background-color: red;
-  padding: 10px;
+  padding: 8px;
+  border-radius: 5px;
 }
 
 #pts {
   background-color: darkblue;
-  padding: 10px;
+  padding: 8px;
+  border-radius: 5px;
 }
+/* onde aparecerá os pontos */
 #pontos, #bombas{
   display: flex;
-  margin: 20px 300px;
+  margin-top: 20px;
   justify-content: center;
   font-size: 1.8em;
 }
+
 #regras {
   font-size: .7em;
   position: relative;
+  bottom: 6%;
+  color: yellow;
 }
 
 /* regras aparecem ao passar o mouse */
 .tooltip {
-  margin-bottom: 50px;
   cursor: pointer;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 320px;
+  width: 250px;
+  height: max-content;
   background-color: yellow;
   color: black;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
   font-size: .9em;
-  bottom: 100%;
+  bottom: 19px;
   transform: rotate(10deg);
-  left: 63%;
+  left: 60%;
 
   /* Position the tooltip */
   position: absolute;
@@ -197,43 +199,39 @@ footer {
   background-color: grey;
   position: fixed;
   bottom: 0;
-width: 100%;
-align-items: center;
-font-variant: small-caps;
-color: yellow;
+  width: 100%;
+  align-items: center;
+  font-variant: small-caps;
+  color: yellow;
 }
-
 
 /* campo minado */
 section#jogo {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
   grid-auto-rows: minmax(80px, auto);
+  border: 2px dotted green;
 }
 
-section#jogo#div{
-  justify-content: center;
-  align-items: center;
-}
-
-/* arruma o tamanho das imagens de grama e bomba chamadas no javascript */
+/* arruma o tamanho das imagens de background de grama e bomba chamadas no javascript. Também arruma a imagem direitinho no balaozinho azul */
 div {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+/* selo desenvolvido por Lu */
 #fixed {
     position: fixed;
     transform: rotateZ(20deg);
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     right: 1%;
-    top: 1%;
+    top: 15%;
     background-color: black;
     color: white;
     border-radius: 50%;
@@ -241,16 +239,22 @@ div {
     border: #f3c110 5px dotted;
 }
 
+/* balaozinho azul*/
 #party {
   padding: 20px;
   position: fixed;
-  font-size: 1em;
-  top: 7%;
-  left: 1%;
-  height: 160px;
-  width: 160px;
+  font-size: .7em;
+  top: 12%;
+  left: 0%;
+  height: 120px;
+  width: 100px;
   border-radius: 10px;
   background-image: url(img/balaoAzul.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  line-height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;

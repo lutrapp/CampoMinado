@@ -17,24 +17,25 @@
         <header>
 
             <article>
-                <div>
+                <div class="itensPlacar">
                     <span id="pts">pontos:</span>
+                      <!-- valor em pontos virá do js -->
                     <div id="pontos"></div>
                 </div>
-                <div>
+                <div class="itensPlacar">
                     <h1 id="placar">
                         Placar
                     </h1>
                 </div>
-                <div>
+                <div class="itensPlacar">
                     <span id="bmb">bombas:</span>
+                    <!-- valor em bombas virá do js -->
                     <div id="bombas"></div>
                 </div>
             </article>
             <button id="joga" onclick="jogar()">Jogar novamente</button>
             <div id="regras" onmouseover="escondeH1()" onmouseout="mostraH1()" class="tooltip">Veja as regras aqui!
-                <span class="tooltiptext">Se fizer 30 pontos você ganha!<br /> Se clicar em 30 bombas você
-                    perde.
+                <span class="tooltiptext">O campo está delimitado pela linha verde! <br />Clique várias vezes dentro do campo.<br /> 30 pontos você ganha!<br /> 30 bombas você perde!
                 </span>
             </div>
         </header>
@@ -47,7 +48,7 @@
 
             </section>
             <a href="index.html">
-            <div  id="party">Hercules faz 9!!!</div>
+            <div  id="party">Hercules faz 9 &hearts;</div>
         </a>
             <div id="fixed">desenvolvido por Luciane Trapp &reg;</div>
         </main>

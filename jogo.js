@@ -27,6 +27,14 @@ function verificaCampo() {
     clicado = Array();
     divVerifica = this.firstElementChild.value;
     if (this.style.backgroundImage == "") {
+        if(somaPontos==30){
+            alert("Você ganhou!");
+            return;
+        }
+        if(somaBombas==30){
+            alert("Você perdeu!");
+            return;
+        }
         if (divVerifica == 0) {
             this.style.backgroundImage = "url(img/grama.jpg)";
             somaPontos += 1;
@@ -36,14 +44,7 @@ function verificaCampo() {
             this.style.backgroundImage = "url(img/bomba.jpg)";
             somaBombas += 1;
         }
-        if(somaPontos>=30){
-            alert("Você ganhou!");
-            return;
-        }
-        if(somaBombas>=30){
-            alert("Você perdeu!");
-            return;
-        }
+       
         pontos.innerHTML = somaPontos;
         bombas.innerHTML = somaBombas;
     }
